@@ -3,7 +3,7 @@ import React from "react";
 import { previousWinningNumbers as allNumber } from "./PreviousWinningNumbers";
 
 /* 
-  todo : 역대 당첨되지 않은 조합찾는 로직 : Maximum call stack size exceeded => 재귀 호출 너무 많음 약 8백만 번 호출 필요  
+    todo : 역대 당첨되지 않은 조합찾는 로직 : Maximum call stack size exceeded => 재귀 호출 너무 많음 약 8백만 번 호출 필요  
 */
 function App() {
   const [lottoNumbers] = React.useState(allNumber);
