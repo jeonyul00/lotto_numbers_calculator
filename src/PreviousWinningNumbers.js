@@ -1,6 +1,6 @@
 /* 
     역대 당첨 번호
-    todo : 서버 생성 후 크롤링 : next? express?
+    todo: 서버 생성 후 크롤링 : next? express? => next가 나을 듯
 */
 export const previousWinningNumbers = [
   [6, 20, 23, 24, 28, 30], // 1091
