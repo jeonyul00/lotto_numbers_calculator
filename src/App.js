@@ -9,7 +9,6 @@ function App() {
   const [lottoNumbers] = React.useState(allNumber);
   const [resultByPosition, setResultByPosition] = React.useState([]);
   const [top6Frequent, setTop6Frequent] = React.useState([]);
-  const [neverDrawnNumbers, setNeverDrawnNumbers] = React.useState([]);
 
   // 자리 별 가장 많이 당첨된 번호
   const findMostFrequentByPosition = (numbers) => {
