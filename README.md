@@ -20,8 +20,3 @@
 ### 🍜 요청
 
 당첨되시면, 마라 엽떡 하나만 사주세요.
-
-### 👤 작성자 정보
-
-- **Author**: jeonyul
-- **Github**: [🔗 여기로 가기](https://github.com/jeonyul00)
