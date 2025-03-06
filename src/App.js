@@ -2,7 +2,6 @@ import "./App.css";
 import React from "react";
 import { previousWinningNumbers as allNumber } from "./PreviousWinningNumbers";
 
-// 가장 자주 당첨된 번호 찾기
 const findTopFrequentNumbers = (numbers, count) => {
   const frequency = {};
   numbers.forEach((set) => {
@@ -15,8 +14,6 @@ const findTopFrequentNumbers = (numbers, count) => {
     .slice(0, count)
     .map((entry) => +entry[0]);
 };
-
-// 상위 빈도수 번호 조합 생성
 const generateTopCombinations = (topNumbers, previousNumbersSet) => {
   const combinations = [];
 
@@ -35,10 +32,9 @@ const generateTopCombinations = (topNumbers, previousNumbersSet) => {
   };
 
   generateCombinations(topNumbers, 6, 0, [], combinations);
-  return combinations.slice(0, 10); // 상위 10개 조합만 반환
+  return combinations.slice(0, 10);
 };
 
-// 자리 별 가장 많이 당첨된 번호
 const findMostFrequentByPosition = (numbers) => {
   const frequency = Array(6)
     .fill(null)
@@ -56,7 +52,6 @@ const findMostFrequentByPosition = (numbers) => {
   });
 };
 
-// 자리 관계없이 가장 많이 당첨된 번호
 const findTop6FrequentNumbers = (numbers) => {
   const frequency = {};
   numbers.forEach((set) => {
@@ -84,7 +79,7 @@ function App() {
     const previousNumbersSet = new Set(
       lottoNumbers.map((set) => set.sort((a, b) => a - b).join(","))
     );
-    const topNumbers = findTopFrequentNumbers(lottoNumbers, 10); // 상위 10개 빈도수 번호
+    const topNumbers = findTopFrequentNumbers(lottoNumbers, 10);
     const topCombos = generateTopCombinations(topNumbers, previousNumbersSet);
     setTopCombinations(topCombos);
   }, [lottoNumbers]);
